@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
+  if (height*9>width*16){
+    return (width*0.7);
+  } else{
+    return (220)
+  }
+
 }
 
 export default function useWindowDimensions() {

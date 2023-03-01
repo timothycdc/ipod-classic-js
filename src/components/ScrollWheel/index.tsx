@@ -162,14 +162,14 @@ const ScrollWheel = () => {
    * in which case we'll show the Now Playing view if music is playing
    */
   useEffectOnce(handleResetIdleCheck);
-  const { height, width } = useWindowDimensions();
+  const width  = useWindowDimensions();
   return (
     <Knob
       value={count}
       min={0}
       max={100}
-      width={width*0.65}
-      height={width*0.65}
+      width={width}
+      height={width}
       step={5}
       fgColor="transparent"
       bgColor={getTheme(deviceTheme).knob.background}
