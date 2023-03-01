@@ -126,6 +126,7 @@ const ScreenContainer = styled.div`
   ${Screen.SM.MediaQuery} {
     margin: ${Unit.MD} ${Unit.MD} 0;
   }
+
 `;
 
 // Create a client

@@ -1,10 +1,13 @@
 import { useCallback, useRef, useState } from 'react';
+import useWindowDimensions from 'hooks/useWindowDimensions';
 
 import { useEffectOnce, useEventListener, useSettings } from 'hooks';
 
 import Knob from './Knob';
 import { createIpodEvent } from 'utils/events';
 import { getTheme } from '../../utils/themes';
+
+
 
 enum WHEEL_QUADRANT {
   TOP = 1,
@@ -159,14 +162,14 @@ const ScrollWheel = () => {
    * in which case we'll show the Now Playing view if music is playing
    */
   useEffectOnce(handleResetIdleCheck);
-
+  const { height, width } = useWindowDimensions();
   return (
     <Knob
       value={count}
       min={0}
       max={100}
-      width={220}
-      height={220}
+      width={width*0.65}
+      height={width*0.65}
       step={5}
       fgColor="transparent"
       bgColor={getTheme(deviceTheme).knob.background}
