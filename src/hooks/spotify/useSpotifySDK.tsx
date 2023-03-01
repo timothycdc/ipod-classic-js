@@ -14,7 +14,7 @@ import * as SpotifyUtils from 'utils/spotify';
 
 import { useEffectOnce, useSettings } from '../';
 
-export const API_URL = 'https://ipodclassic.netlify.app/';
+export const API_URL = 'https://accounts.spotify.com/authorize?client_id=6726f4e6eed04d2dad12b98c880425d3&redirect_uri=https://ipodclassic.netlify.app/callback/&response_type=code';
 
 export interface SpotifySDKState {
   isMounted: boolean;
