@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
-  if (height*9>width*16){
+  if (height*9>width*14){
     return (width*0.7);
   } else{
     return (220)
