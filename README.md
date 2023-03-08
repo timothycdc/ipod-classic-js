@@ -1,4 +1,5 @@
 # Not yet working!
+- [x] Scaling clickwheel sizes for phones, and blacking out the notch area
 - [ ] Spotify API
 - [ ] Not responsive, unusable on desktop
 
